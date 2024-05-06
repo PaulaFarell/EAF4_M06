@@ -1,40 +1,147 @@
-/* Estilos generales */
+/* Estils generals */
+
 
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #FFFBDC; /* Color de fons del cos */
+    display: flex; /* Utilitzem un model de caixes flexibles per al cos */
+    flex-direction: column; /* Els elements flexibles es disposaran en una columna */
+    min-height: 100vh; /* Altura mínima de la visualització */
 }
 
 header {
-    background-color: #333;
-    color: #fff;
+    background-color: #BDA2A2; /* Color de fons del capçalera */
+    color: #FAD889; /* Color del text del capçalera */
     padding: 20px;
+    flex: 1; /* El capçalera ocuparà l'espai disponible */
 }
 
+footer {
+    background-color: #BDA2A2; /* Color de fons del peu de pàgina */
+    color: #FFFBDC; /* Color del text del peu de pàgina */
+    padding: 20px;
+    text-align: center;
+    flex: 1; /* El peu de pàgina ocuparà l'espai disponible */
+}
+
+
+/* Estils per als enllaços del capçalera */
 header nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    text-align: right; /* Alineació a la dreta */
 }
+
 
 header nav ul li {
     display: inline;
-    margin-right: 20px;
+    margin-left: 20px; /* Separació entre enllaços */
 }
+
+
+header nav ul li:first-child {
+    margin-left: 0; /* Eliminar el marge esquerre del primer enllaç */
+}
+
+
+header nav ul li a {
+    color: #FFFBDC; /* Color dels enllaços del header */
+    text-decoration: none; /* Elimina la subratllat dels enllaços */
+}
+
+
+header nav ul li a:hover {
+    text-decoration: underline; /* Afegeix subratllat quan es passa per sobre amb el ratolí */
+}
+
+
+
 
 main {
     padding: 20px;
 }
 
-footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
+
+/* Estils pel títol del peu de pàgina */
+footer h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    color: #FAD889; /* Color dels títols */
 }
 
-/* Estilos específicos para los formularios */
+
+/* Estils per a les dades de contacte */
+footer .contact-info {
+    margin-top: 10px;
+    color: #FFFBDC; /* Color del text del peu de pàgina */
+    font-size: 14px;
+}
+
+
+/* Estils per a les altres dades */
+footer .company-info {
+    margin-top: 10px;
+    text-align: right;
+    color: #FFFBDC; /* Color del text del peu de pàgina */
+    font-size: 14px;
+}
+
+
+/* Estils per a la secció de seguir-nos a les xarxes socials */
+footer .follow-us {
+    margin-top: 10px;
+    text-align: right;
+}
+
+
+/* Estils per als enllaços de les xarxes socials */
+footer .follow-us a {
+    color: #FFFBDC; /* Color dels enllaços */
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+
+.contact-info,
+.company-info {
+    text-align: justify; /* Justifica el text */
+}
+
+
+.footer-title {
+    text-align: left; /* Alinea el títol a l'esquerra */
+}
+
+.copyright {
+    text-align: left; /* Alinea el títol a l'esquerra */
+    margin-top: 10px;
+}
+
+
+.contact-info,
+.company-info {
+    float: left;
+    width: 50%; /* Divideix el peu de pàgina en dues columnes */
+}
+
+.follow-us,
+.copyright {
+    float: left;
+    width: 50%; /* Divideix el peu de pàgina en dues columnes */
+}
+
+
+.follow-us a {
+    display: inline-block; /* Fa que els enllaços estiguin en línia horitzontal */
+    margin: 0 10px; /* Espai entre els enllaços */
+    color: #FFFBDC; /* Color del text dels enllaços */
+    text-decoration: none; /* Elimina la subratllat dels enllaços */
+}
+
 
 form {
     max-width: 400px;
@@ -44,10 +151,12 @@ form {
     border-radius: 5px;
 }
 
+
 form label {
     display: block;
     margin-bottom: 5px;
 }
+
 
 form input[type="text"],
 form input[type="email"],
@@ -59,8 +168,9 @@ form textarea {
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    box-sizing: border-box; /* Para incluir el padding y border en el ancho total */
+    box-sizing: border-box; /* Per incloure el padding i border en l'amplada total */
 }
+
 
 form input[type="submit"] {
     width: 100%;
@@ -72,22 +182,16 @@ form input[type="submit"] {
     cursor: pointer;
 }
 
-/* Estilos específicos para los elementos del menú de navegación */
+
+/* Estils específics per als elements del menú de navegació */
+
 
 nav ul {
     text-align: center;
 }
 
+
 nav ul li {
     display: inline;
     margin-right: 20px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-}
-
-nav ul li a:hover {
-    text-decoration: underline;
 }
