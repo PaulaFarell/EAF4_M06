@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Climber - Contacte</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- Incluir la cabecera -->
+    <!-- #include virtual="cabecera.html" -->
+    <header>
+        <h1>Pixel Climber</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inici</a></li>
+                <li><a href="videojuego.html">Sobre Pixel Climber</a></li>
+                <li><a href="contacto.html">Contacte</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Contáctanos</h2>
+        <form action="enviar_formulario.php" method="post">
+            <label for="nombre">Nombres y apellidos:</label><br>
+            <input type="text" id="nombre" name="nombre" required><br>
+
+            <label for="direccion">Dirección:</label><br>
+            <input type="text" id="direccion" name="direccion" required><br>
+
+            <label for="ciudad">Ciudad:</label><br>
+            <select id="ciudad" name="ciudad">
+                <option value="barcelona">Barcelona</option>
+                <option value="madrid">Madrid</option>
+                <option value="valencia">Valencia</option>
+                <!-- Agrega más opciones según sea necesario -->
+            </select><br>
+
+            <label for="fecha_nacimiento">Fecha de nacimiento:</label><br>
+            <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required><br>
+
+            <label>Sexo:</label><br>
+            <input type="radio" id="sexo_masculino" name="sexo" value="masculino" required>
+            <label for="sexo_masculino">Masculino</label><br>
+            <input type="radio" id="sexo_femenino" name="sexo" value="femenino">
+            <label for="sexo_femenino">Femenino</label><br>
+
+            <label for="email">Correo electrónico:</label><br>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password" required><br>
+
+            <input type="checkbox" id="condiciones" name="condiciones" required>
+            <label for="condiciones">Acepto las condiciones</label><br>
+
+            <input type="submit" value="Enviar">
+        </form>
+    </main>
+
+    <!-- Incluir el pie de página -->
+    <!-- #include virtual="pie_de_pagina.html" -->
+    <footer>
+        <p>&copy; Pixel Climber - 2024 Tots els drets reservats</p>
+    </footer>
+</body>
+</html>
