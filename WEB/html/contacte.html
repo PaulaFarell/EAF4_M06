@@ -15,54 +15,76 @@
             <ul>
                 <li><a href="index.html">Inici</a></li>
                 <li><a href="videojuego.html">Sobre Pixel Climber</a></li>
-                <li><a href="contacto.html">Contacte</a></li>
+                <li><a href="contacto.html">Contacte</a></li> <!-- Cambiado de "contacte.html" a "contacto.html" -->
             </ul>
         </nav>
     </header>
 
     <main>
-        <h2>Contáctanos</h2>
+        <h2>Contacta'ns</h2>
         <form action="enviar_formulario.php" method="post">
-            <label for="nombre">Nombres y apellidos:</label><br>
+            <label for="nombre">Nom i cognoms:</label><br>
             <input type="text" id="nombre" name="nombre" required><br>
 
-            <label for="direccion">Dirección:</label><br>
+            <label for="direccion">Direcció:</label><br>
             <input type="text" id="direccion" name="direccion" required><br>
 
-            <label for="ciudad">Ciudad:</label><br>
+            <label for="ciudad">Ciutat:</label><br>
             <select id="ciudad" name="ciudad">
                 <option value="barcelona">Barcelona</option>
                 <option value="madrid">Madrid</option>
-                <option value="valencia">Valencia</option>
-                <!-- Agrega más opciones según sea necesario -->
+                <option value="valencia">València</option>
             </select><br>
 
-            <label for="fecha_nacimiento">Fecha de nacimiento:</label><br>
+            <label for="fecha_nacimiento">Data de naixement:</label><br>
             <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required><br>
 
-            <label>Sexo:</label><br>
+            <label>Sexe:</label><br>
             <input type="radio" id="sexo_masculino" name="sexo" value="masculino" required>
-            <label for="sexo_masculino">Masculino</label><br>
+            <label for="sexo_masculino">Masculí</label><br>
             <input type="radio" id="sexo_femenino" name="sexo" value="femenino">
-            <label for="sexo_femenino">Femenino</label><br>
+            <label for="sexo_femenino">Femení</label><br>
 
-            <label for="email">Correo electrónico:</label><br>
+            <label for="email">Correu electrònic:</label><br>
             <input type="email" id="email" name="email" required><br>
 
-            <label for="password">Password:</label><br>
+            <label for="password">Contrasenya:</label><br>
             <input type="password" id="password" name="password" required><br>
 
             <input type="checkbox" id="condiciones" name="condiciones" required>
-            <label for="condiciones">Acepto las condiciones</label><br>
+            <label for="condiciones">Accepto les condicions</label><br>
 
             <input type="submit" value="Enviar">
         </form>
     </main>
-
-    <!-- Incluir el pie de página -->
-    <!-- #include virtual="pie_de_pagina.html" -->
     <footer>
-        <p>&copy; Pixel Climber - 2024 Tots els drets reservats</p>
-    </footer>
+        <div class="footer-content">
+            <div class="footer-left">
+                <div class="footer-title">
+                    <h2>Pixel Climber</h2>
+                </div>
+                <div class="contact-info">
+                    <p>pfarell1241@gmail.com</p>
+                    <p>Tel. +00 000 000</p>
+                    <p>Barcelona - España</p>
+                </div>
+            </div>
+            <div class="footer-right">
+                <div class="company-info">
+                    <p>Paula Farell Cabrera</p>
+                    <p>Curs 23/24</p>
+                    <p>EAF 4 (UF 4)</p>
+                </div>
+            </div>
+        </div>
+        <hr> <!-- Línea separadora -->
+        <p class="copyright">&copy; Pixel Climber - 2024 Tots els drets reservats</p>
+        <div class="follow-us">
+            <p>Segueix-nos a les xarxes:</p>
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
+            <a href="#">Facebook</a>
+        </div>
+    </footer>    
 </body>
 </html>
