@@ -1,6 +1,5 @@
 /* Estils generals */
 
-
 body {
     font-family: Arial, sans-serif;
     color: #899AA1
@@ -25,6 +24,19 @@ footer {
     padding: 20px;
     text-align: center;
     flex: 1; /* El peu de pàgina ocuparà l'espai disponible */
+}
+
+/* Estils específics per als elements del menú de navegació */
+
+
+nav ul {
+    text-align: center;
+}
+
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
 }
 
 
@@ -57,14 +69,6 @@ header nav ul li a {
 header nav ul li a:hover {
     text-decoration: underline; /* Afegeix subratllat quan es passa per sobre amb el ratolí */
 }
-
-
-
-
-main {
-    padding: 20px;
-}
-
 
 /* Estils pel títol del peu de pàgina */
 footer h2 {
@@ -143,12 +147,129 @@ footer .follow-us a {
     text-decoration: none; /* Elimina la subratllat dels enllaços */
 }
 
+/*index*/
+
+main {
+    padding: 20px;
+}
+
+.content {
+    display: flex;
+    justify-content: center; /* Centra el contingut horitzontalment */
+    align-items: flex-start; /* Alinea el contingut a l'esquerra verticalment */
+    flex: 1; /* El contingut ocuparà l'espai disponible */
+    padding: 20px;
+}
+
+.section {
+    display: flex;
+    align-items: center; /* Alinea els elements verticalment */
+    margin-bottom: 20px; /* Espai entre les seccions */
+}
+
+.section img {
+    width: 200px; /* Amplada de les imatges */
+    margin-right: 20px; /* Espai entre les imatges i el text */
+}
+
+.text {
+    flex: 1; /* El text ocuparà l'espai disponible */
+}
+
+.text h2 {
+    color: #FAD889; /* Color dels títols */
+}
+
+.text p {
+    color: #899AA1; /* Color del text del paràgraf */
+}
+
+.text a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #FBBE9A; /* Color de fons del botó */
+    color: #FFFBDC; /* Color del text del botó */
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px; /* Espai entre el text i el botó */
+}
+
+
+
+/*Videojoc*/
+
+/* Estils específics per a la secció del vídeo */
+.video-section {
+    width: 100%; /* Dividim l'ample de la pàgina en dues columnes */
+    float: left; /* Flotem l'element cap a l'esquerra */
+}
+
+.video-section video {
+    width: 100%; /* La mida del vídeo serà el 100% de l'ample del seu contenidor */
+}
+
+/* Estils específics per a la secció del text */
+.text-section {
+    width: 100%; /* Dividim l'ample de la pàgina en dues columnes */
+    float: center; /* Flotem l'element cap a l'esquerra */
+    padding: 0 20px; /* Afegim una mica de padding per separar el text del vídeo */
+}
+
+.text-section h2 {
+    color: #FBBE9A; /* Color del títol */
+}
+
+.text-section p {
+    color: #899AA1; /* Color del text */
+}
+
+.text-section button {
+    background-color: #FBBE9A; /* Color de fons del botó */
+    color: #FFFBDC; /* Color del text del botó */
+    padding: 10px 20px; /* Padding del botó */
+    border: none; /* Sense vora */
+    cursor: pointer; /* Cursor de punter */
+    margin-top: 10px; /* Espai superior */
+}
+
+.text-section button:hover {
+    background-color: #DAA484; /* Canvi de color de fons al passar el ratolí per sobre */
+}
+
+/*Contacte*/
+
+/* Cambiar el color del texto en el elemento <main> */
+main {
+    color: #FBBE9A; /* Color del texto */
+}
+
+/* Cambiar el color del texto de las etiquetas <label> dentro del formulario */
+main label {
+    color: #899AA1; /* Color del texto de las etiquetas */
+}
+
+/* Cambiar el color del texto de los campos de entrada (input) */
+main input[type="text"],
+main input[type="email"],
+main input[type="password"],
+main select,
+main textarea,
+main input[type="date"] {
+    color: #899AA1; /* Color del texto de los campos de entrada */
+}
+
+/* Cambiar el color del texto de los botones */
+main input[type="submit"] {
+    color: #FFFBDC; /* Color del texto del botón */
+}
+
+
 
 form {
     max-width: 400px;
     margin: 0 auto;
     padding: 20px;
-    border: 1px solid #ccc;
+    border: 1px solid #899AA1;
     border-radius: 5px;
 }
 
@@ -167,7 +288,7 @@ form textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #899AA1;
     border-radius: 5px;
     box-sizing: border-box; /* Per incloure el padding i border en l'amplada total */
 }
@@ -176,23 +297,9 @@ form textarea {
 form input[type="submit"] {
     width: 100%;
     padding: 10px;
-    background-color: #333;
-    color: #fff;
+    background-color: #FBBE9A;
+    color: #FFFBDC;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-}
-
-
-/* Estils específics per als elements del menú de navegació */
-
-
-nav ul {
-    text-align: center;
-}
-
-
-nav ul li {
-    display: inline;
-    margin-right: 20px;
 }

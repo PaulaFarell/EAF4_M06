@@ -21,19 +21,21 @@
     </header>
 
     <main>
-        <h2>Què és Pixel Climber?</h2>
-        <p>Pixel Climber és un videojoc HTML5 de plataformes on has d'ajudar un gatet a recollir totes les llaunes i habilitats possibles.</p>
-        
-        <h2>Explora el món de Pixel Climber</h2>
-        <p>Aquí tens un vídeo que mostra algunes escenes emocionants del joc:</p>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/TU-PrSSgCvg" frameborder="0" allowfullscreen></iframe>
+        <div class="video-section">
+            <!-- Vídeo -->
+            <video src="video/video.mp4" controls></video>
+        </div>
 
-        <h2>Sons del joc</h2>
-        <p>Per experimentar una mica de l'ambientació del joc, escolta aquest fragment de la banda sonora:</p>
-        <audio controls>
-            <source src="audio/pixel_climber_soundtrack.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
+        <div class="text-section">
+            <!-- Títol -->
+            <h2>Què és Pixel Climber?</h2>
+            <!-- Paràgraf -->
+            <p>Pixel Climber és un videojoc HTML5 de plataformes per on el personatge va avançant, sigui saltant o corrents. Aquests moviments es controla des del teclat i ajuda a fer que el personatge pugui recollir els objectes que va trobant per l'escenari.</p>
+            <!-- Botó -->
+            <button onclick="playAudio()">Escolta'm</button>
+            <!-- Àudio -->
+            <audio id="audio" src="audio/audio.mp3"></audio>
+        </div>
     </main>
     <footer>
         <div class="footer-content">
