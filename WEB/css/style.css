@@ -236,6 +236,12 @@ main {
     background-color: #DAA484; /* Canvi de color de fons al passar el ratolí per sobre */
 }
 
+.game-container {
+    width: 800px; /* Amplada del joc */
+    height: 600px; /* Alçada del joc */
+    margin: 0 auto; /* Centrat horitzontalment */
+}
+
 /*Contacte*/
 
 /* Cambiar el color del texto en el elemento <main> */

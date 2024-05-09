@@ -1,0 +1,209 @@
+{
+	"textures": [
+		{
+			"image": "Michi_Sprites.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 1926,
+				"h": 497
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "Michi_limpito.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 640,
+						"h": 178
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 640,
+						"h": 178
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 640,
+						"h": 178
+					}
+				},
+				{
+					"filename": "Michi_sentarse.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 640,
+						"h": 178
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 640,
+						"h": 178
+					},
+					"frame": {
+						"x": 1,
+						"y": 181,
+						"w": 640,
+						"h": 178
+					}
+				},
+				{
+					"filename": "Michi_caminar_Frente.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 640,
+						"h": 177
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 640,
+						"h": 177
+					},
+					"frame": {
+						"x": 643,
+						"y": 1,
+						"w": 640,
+						"h": 177
+					}
+				},
+				{
+					"filename": "Michi_Mimir.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 640,
+						"h": 168
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 640,
+						"h": 168
+					},
+					"frame": {
+						"x": 643,
+						"y": 180,
+						"w": 640,
+						"h": 168
+					}
+				},
+				{
+					"filename": "Michi_Caminar_Derecha.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 640,
+						"h": 166
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 640,
+						"h": 166
+					},
+					"frame": {
+						"x": 1285,
+						"y": 1,
+						"w": 640,
+						"h": 166
+					}
+				},
+				{
+					"filename": "Michi_caminar_izquierda.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 640,
+						"h": 165
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 640,
+						"h": 165
+					},
+					"frame": {
+						"x": 1285,
+						"y": 169,
+						"w": 640,
+						"h": 165
+					}
+				},
+				{
+					"filename": "Michi_caminar_espalda.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 640,
+						"h": 160
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 640,
+						"h": 160
+					},
+					"frame": {
+						"x": 1285,
+						"y": 336,
+						"w": 640,
+						"h": 160
+					}
+				},
+				{
+					"filename": "Michi_mimido.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 335,
+						"h": 102
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 335,
+						"h": 102
+					},
+					"frame": {
+						"x": 1,
+						"y": 361,
+						"w": 335,
+						"h": 102
+					}
+				},
+				{
+					"filename": "Michi_susto.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 317,
+						"h": 114
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 317,
+						"h": 114
+					},
+					"frame": {
+						"x": 338,
+						"y": 361,
+						"w": 317,
+						"h": 114
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:ea55444de90179fa77ceef679be5985e:b554ee7611e495765e75a13727edde4d:f439641390e05adce9957900852397e5$"
+	}
+}
