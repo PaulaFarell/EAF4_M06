@@ -1,18 +1,3 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <title>Pixel Climber</title>
-    <script src="//cdn.jsdelivr.net/npm/phaser@3.11.0/dist/phaser.js"></script>
-    <style type="text/css">
-        body {
-            margin: 0;
-        }
-    </style>
-</head>
-<body>
-
-<script>
 let config = {
     type: Phaser.AUTO,
     width: 800,
@@ -35,9 +20,9 @@ var game = new Phaser.Game(config);
 
 function preload() {
     this.load.image('background', 'img/Mapa_Level1.png');
-
     this.load.atlas('player', 'json/Michi_Sprites.json');
     this.load.image('tiles', 'Mapa.png');
+    
 }
 
 function create() {
@@ -88,7 +73,3 @@ function update() {
         player.setVelocityY(-330);
     }
 }
-</script>
-
-</body>
-</html>
