@@ -12,8 +12,8 @@
 </head>
 <body>
 
-<script type="text/javascript">
-var config = {
+<script>
+let config = {
     type: Phaser.AUTO,
     width: 800,
     height: 600,
