@@ -19,10 +19,9 @@ let config = {
 var game = new Phaser.Game(config);
 
 function preload() {
-    this.load.image('background', 'img/Mapa_Level1.png');
-    this.load.atlas('player', 'json/Michi_Sprites.json');
-    this.load.image('tiles', 'Mapa.png');
-    
+    this.load.image('background', '../img/Mapa/Nivell1.png');
+    this.load.atlas('player', '../json/Michi_Sprites.json');
+    this.load.image('tiles', '../img/Mapa/Nivell1.png');
 }
 
 function create() {

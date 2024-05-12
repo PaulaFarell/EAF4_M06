@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <title>Pixel Climber</title>
-
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.60.0/dist/phaser-arcade-physics.min.js"></script>
     <style type="text/css">
         body {
             margin: 0;
@@ -38,9 +38,9 @@ var config = {
 var game = new Phaser.Game(config);
 
 function preload() {
-    this.load.image('background', 'img/mapa_level1.png');
-    this.load.atlas('player', 'json/Michi_Sprites.json');
-    //this.load.image('tiles', 'Mapa.png');
+    this.load.image('background', 'img/Sprite/Mapa/Nivell1.png');
+    this.load.atlas('player', 'img/Sprite/Michi_sentarse.png');
+    this.load.image('tiles', 'img/Mapa/Nivell1.png');
 }
 
 function create() {
