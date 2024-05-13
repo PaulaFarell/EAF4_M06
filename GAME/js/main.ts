@@ -1,6 +1,6 @@
 import { LoadScene } from "./Escenes/Load";
 import { MenuScene } from "./Escenes/Menu";
-import { PlayScene } from "./Escenes/Nivell1";
+
 
 let game = new Phaser.Game({
     width: 800,
