@@ -1,28 +1,98 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <title>Pixel Climber</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.60.0/dist/phaser-arcade-physics.min.js"></script>
+    <style type="text/css">
+        body {
+            margin: 0;
+        }
+    </style>
 </head>
 <body>
-    <script src="//cdn.jsdelivr.net/npm/phaser@3.0.0/dist/phaser.min.js"></script>
     <script type="text/javascript">
-        // The game config that is used by Phaser
         var config = {
             type: Phaser.AUTO,
-            parent: 'phaser-example',
             width: 800,
             height: 600,
+            physics: {
+                default: 'arcade',
+                arcade: {
+                    gravity: { y: 300 },
+                    debug: false
+                }
+            },
             scene: {
                 preload: preload,
-                create: create
+                create: create,
+                update: update
             }
         };
-        // Create a new Phaser Game object
+        
         var game = new Phaser.Game(config);
+        
         function preload() {
+            this.load.image('background', 'img/Sprite/Mapa/Nivell1.png');
+            this.load.atlas('player', 'img/Sprite/Michi_sentarse.png');
+            this.load.image('tiles', 'img/Mapa/Nivell1.png');
         }
+        
         function create() {
+            var background = this.add.sprite(0, 0, 'background');
+        
+            // Crear el jugador
+            player = this.physics.add.sprite(100, 450, 'player');
+            player.setBounce(0.2);
+            player.setCollideWorldBounds(true);
+        
+            // Crear animacions
+            this.anims.create({
+                key: 'turn',
+                frames: [ { key: 'player', frame: 4 } ],
+                frameRate: 20
+            });
+            this.anims.create({
+                key: 'right',
+                frames: this.anims.generateFrameNumbers('player', { start: 5, end: 8 }),
+                frameRate: 10,
+                repeat: -1
+            });
+        
+            // Crear plataformes
+            platforms = this.physics.add.staticGroup();
+            platforms.create(400, 568, 'tiles').setScale(2).refreshBody();
+            // Altres plataformes...
+        
+            // Configurar col·lisions
+            this.physics.add.collider(player, platforms);
+        
+            cursors = this.input.keyboard.createCursorKeys();
         }
-    </script>
+        
+        function update() {
+            if (cursors.left.isDown) {
+                player.setVelocityX(-160);
+                player.anims.play('left', true);
+            } else if (cursors.right.isDown) {
+                player.setVelocityX(160);
+                player.anims.play('right', true);
+            } else {
+                player.setVelocityX(0);
+                player.anims.play('turn');
+            }
+        
+            if (cursors.up.isDown && player.body.touching.down) {
+                player.setVelocityY(-330);
+            }
+        }
+        </script>
+        
+    <div class="title-screen">
+        <h1>Pixel Climber</h1>
+        <p>Pulsa cualquier tecla para comenzar</p>
+    </div>
+    <script src="js/Scenes/homeScene.js"></script>
 </body>
 </html>

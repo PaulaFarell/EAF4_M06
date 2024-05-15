@@ -1,61 +1,23 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Pixel Climber</title>
-    <script src="https://cdn.jsdelivr.net/npm/phaser@3.60.0/dist/phaser-arcade-physics.min.js"></script>
-    <style>
-        body {
-            margin: 0;
-        }
-    </style>
-</head>
-<body>
-
-<script>
-    let config = {
-        type: Phaser.AUTO,
-        width: 800,
-        height: 600,
-        physics: {
-            default: 'arcade',
-            arcade: {
-                gravity: { y: 300 },
-                debug: false
+    <head>
+        <meta charset="UTF-8" />
+        <script src="js/phaser.js"></script>
+        <style>
+            body {
+                background: black;
             }
-        },
-        scene: {
-            preload: preload,
-            create: create,
-            update: update
-        }
-    };
-
-    let game = new Phaser.Game(config);
-
-
-    function preload() {
-        // Càrrega de recursos com arxius d'imatges, spritesheets, etc.
-    }
-
-    function create() {
-        // Creació del món del joc, personatges, plataformes, etc.
-    }
-
-    function update() {
-        // Lògica del joc, com moviment del personatge, col·lisions, etc.
-    }
-    
-    let titleScene = {
-        create: function() {
-            // Mostra el títol i les instruccions
-        }
-    };
-
-    game.scene.add('title', title
-
-
-</script>
-
-</body>
+            canvas {
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <script src="js/scenes/LoadingScene.js"></script>
+        <script src="js/scenes/TitleScene.js"></script>
+        <script src="js/scenes/Level1Scene.js"></script>
+        <script src="js/scenes/Level2Scene.js"></script>
+        <script src="js/scenes/GameOverScene.js"></script>
+        <script src="js/main.js"></script>
+    </body>
 </html>
