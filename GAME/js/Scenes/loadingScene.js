@@ -1,16 +1,10 @@
-var LoadingScene = new Phaser.Scene('Loading');
+const loader = (game) => {
 
-LoadingScene.preload = function(){
+    var progressBar = game.add.graphics();
+    var width = game.cameras.main.width;
+    var height = game.cameras.main.height;
 
-    var progressBar = this.add.graphics();
-    var progressBox = this.add.graphics();
-
-    progressBox.fillStyle(0x222222, 0.8);
-    progressBox.fillRect(240, 270, 320, 50);
-
-    var width = this.cameras.main.width;
-    var height = this.cameras.main.height;
-    var loadingText = this.make.text({
+    var loadingText = game.make.text({
         x: width / 2,
         y: height / 2 - 50,
         text: 'Loading...',
@@ -21,8 +15,8 @@ LoadingScene.preload = function(){
     });
     loadingText.setOrigin(0.5, 0.5);
     
-    var percentText = this.make.text({
-    x: width / 2,
+    var percentText = game.make.text({
+        x: width / 2,
         y: height / 2 - 5,
         text: '0%',
         style: {
@@ -30,42 +24,35 @@ LoadingScene.preload = function(){
             fill: '#ffffff'
         }
     });
-    
     percentText.setOrigin(0.5, 0.5);
     
-    var assetText = this.make.text({
+    var assetText = game.make.text({
         x: width / 2,
         y: height / 2 + 50,
         text: '',
         style: {
-             font: '18px monospace',
-             fill: '#ffffff'
+            font: '18px monospace',
+            fill: '#ffffff'
         }
-    });   
+    });
     assetText.setOrigin(0.5, 0.5);
     
-    this.load.on('progress', function (value) {
+    game.load.on('progress', function (value) {
         percentText.setText(parseInt(value * 100) + '%');
         progressBar.clear();
         progressBar.fillStyle(0xffffff, 1);
-        progressBar.fillRect(250, 280, 300 * value, 30);
+        progressBar.fillRect(width, height, 300 * value, 30);
     });
     
-    this.load.on('fileprogress', function (file) {
-        assetText.setText('Loading asset: ' + file.src);
+    game.load.on('fileprogress', function (file) {
+        assetText.setText('Loading asset: ' + file.key);
     });
-    
-    this.load.on('complete', function () {
+    game.load.on('complete', function () {
         progressBar.destroy();
-        progressBox.destroy();
         loadingText.destroy();
         percentText.destroy();
         assetText.destroy();
     });
+}
 
-};
-
-LoadingScene.create = function(){
-    this.scene.start('Level1Scene');
-
-};
+export default loader
